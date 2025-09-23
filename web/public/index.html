@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perkuliahan CRUD</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Perkuliahan CRUD</h1>
+    <p>Manage Mhs, MataKuliah, Dosen, and Kuliah</p>
+  </header>
+
+  <nav class="tabs">
+    <button data-tab="all" class="active">All Data</button>
+    <button data-tab="mhs">Mhs</button>
+    <button data-tab="mk">MataKuliah</button>
+    <button data-tab="dosen">Dosen</button>
+    <button data-tab="kuliah">Kuliah</button>
+  </nav>
+
+  <main>
+    <section id="tab-all" class="tab active">
+      <h2>All Data</h2>
+      <div class="grid">
+        <div>
+          <h3>Mhs</h3>
+          <table id="table-all-mhs" class="table"></table>
+        </div>
+        <div>
+          <h3>MataKuliah</h3>
+          <table id="table-all-mk" class="table"></table>
+        </div>
+        <div>
+          <h3>Dosen</h3>
+          <table id="table-all-dosen" class="table"></table>
+        </div>
+        <div>
+          <h3>Kuliah</h3>
+          <table id="table-all-kuliah" class="table"></table>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-mhs" class="tab">
+      <h2>Mhs</h2>
+      <form id="form-mhs" class="form">
+        <input placeholder="NIM" name="NIM" required />
+        <input placeholder="Nama" name="Nama" required />
+        <input placeholder="Alamat" name="Alamat" required />
+        <button type="submit">Save</button>
+      </form>
+      <table id="table-mhs" class="table"></table>
+    </section>
+
+    <section id="tab-mk" class="tab">
+      <h2>MataKuliah</h2>
+      <form id="form-mk" class="form">
+        <input placeholder="KodeMatkul" name="KodeMatkul" required />
+        <input placeholder="NamaMatkul" name="NamaMatkul" required />
+        <input placeholder="SKS" name="SKS" type="number" min="1" max="24" required />
+        <input placeholder="Semester" name="Semester" type="number" min="1" max="14" required />
+        <button type="submit">Save</button>
+      </form>
+      <table id="table-mk" class="table"></table>
+    </section>
+
+    <section id="tab-dosen" class="tab">
+      <h2>Dosen</h2>
+      <form id="form-dosen" class="form">
+        <input placeholder="NIP" name="NIP" required />
+        <input placeholder="Nama" name="Nama" required />
+        <input placeholder="Alamat" name="Alamat" required />
+        <button type="submit">Save</button>
+      </form>
+      <table id="table-dosen" class="table"></table>
+    </section>
+
+    <section id="tab-kuliah" class="tab">
+      <h2>Kuliah (Transaksi)</h2>
+      <form id="form-kuliah" class="form">
+        <input placeholder="NIM" name="NIM" required />
+        <input placeholder="NIP" name="NIP" required />
+        <input placeholder="KodeMatkul" name="KodeMatkul" required />
+        <select name="Nilai" required>
+          <option value="">Nilai</option>
+          <option>A</option>
+          <option>AB</option>
+          <option>B</option>
+          <option>BC</option>
+          <option>C</option>
+          <option>D</option>
+          <option>E</option>
+        </select>
+        <button type="submit">Save</button>
+      </form>
+      <table id="table-kuliah" class="table"></table>
+    </section>
+  </main>
+
+  <footer>
+    <small>Perkuliahan CRUD Web</small>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html> 
