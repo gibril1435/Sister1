@@ -8,6 +8,9 @@ const {
   DB_PORT = '3306'
 } = process.env;
 
+// ADD THIS LINE FOR DEBUGGING
+console.log('Attempting to connect with:', { DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT });
+
 export const pool = mysql.createPool({
   host: DB_HOST,
   user: DB_USER,
